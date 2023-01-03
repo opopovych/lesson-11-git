@@ -32,12 +32,10 @@
 						<li><a
 							href="${pageContext.request.contextPath}/createProduct.jsp">Create
 								product</a></li>
-						<li><a href="#">Edit product</a></li>
+						<li><a href="">Edit product</a></li>
 						<li><a href="#">Remove product</a></li>
 					</ul></li>
-				<li><a
-					href="${pageContext.request.contextPath}/allProducts.jsp">All
-						products</a></li>
+				<li><a href="${pageContext.request.contextPath}/allProducts.jsp">All products</a></li>
 
 			</ul>
 
@@ -72,7 +70,11 @@
 					</div>
 				</div>
 			</nav>
-
+			<div class="container-fluid">
+				<div class="row">
+					<div id="productCards"></div>
+				</div>
+			</div>
 
 		</div>
 	</div>

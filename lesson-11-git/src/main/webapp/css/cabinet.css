@@ -61,6 +61,7 @@ a:focus {
     max-width: 250px;
     background: #393a3e;
     color: #fff;
+     z-index:999;
     transition: all 0.3s;
 }
 
@@ -148,7 +149,7 @@ a.article:hover {
 #content {
     width: 100%;
     padding: 20px;
-    min-height: 100vh;
+   min-height:100vh;
     transition: all 0.3s;
 }
 

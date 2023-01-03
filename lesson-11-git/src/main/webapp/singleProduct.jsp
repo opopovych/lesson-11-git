@@ -32,12 +32,10 @@
 						<li><a
 							href="${pageContext.request.contextPath}/createProduct.jsp">Create
 								product</a></li>
-						<li><a href="#">Edit product</a></li>
+						<li><a href="">Edit product</a></li>
 						<li><a href="#">Remove product</a></li>
 					</ul></li>
-				<li><a
-					href="${pageContext.request.contextPath}/allProducts.jsp">All
-						products</a></li>
+				<li><a href="${pageContext.request.contextPath}/allProducts.jsp">All products</a></li>
 
 			</ul>
 
@@ -72,7 +70,42 @@
 					</div>
 				</div>
 			</nav>
-
+			<div class="container-fluid singleProduct">
+				<div class="col">
+					<div class="card">
+					<div class="card-body">
+					<h5 class="card-title">${product.name}</h5>
+					<h6 class="card-subtitle mb-2 text-muted">${product.price}</h6>
+					<p class="card-text">${product.description}</p>
+					<button type=submit class="btn btn-primary" data-toggle="modal"
+					data-target="#buyProductModal">buy product</button>
+					</div>
+					</div>
+				</div>
+			</div>
+			<!-- Modal -->
+	<div class="modal fade" id="buyProductModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Are You sure that You want to buy this product?
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Cancel</button>
+					<button type="button" product-id="${product.id}"  class="btn btn-primary buy-product">Buy</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 		</div>
 	</div>
@@ -80,6 +113,7 @@
 		src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 	<script src="js/cabinet.js"></script>
+	<script src="js/serverCall.js"></script>
 	<script defer
 		src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
 		integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
