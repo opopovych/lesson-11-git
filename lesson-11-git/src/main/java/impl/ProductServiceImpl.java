@@ -2,12 +2,15 @@ package impl;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 
 import dao.ProductDao;
 import dao.impl.ProductDaoImpl;
-import les05.Product;
+import domain.Product;
 import service.ProductService;
 
 public class ProductServiceImpl implements ProductService {
@@ -61,6 +64,12 @@ public class ProductServiceImpl implements ProductService {
 	public List<Product> readAll() {
 		// TODO Auto-generated method stub
 		return productDao.readAll();
+	}
+
+	@Override
+	public Map<Integer, Product> readAllMap() {
+		List<Product> products = readAll();
+		return products.stream().collect(Collectors.toMap(Product::getId, Function.identity()));
 	}
 
 }

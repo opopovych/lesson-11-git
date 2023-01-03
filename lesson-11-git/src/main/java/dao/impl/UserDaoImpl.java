@@ -11,7 +11,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import dao.UserDao;
-import les05.User;
+import domain.User;
 import utils.ConnectionUtil;
 
 public class UserDaoImpl implements UserDao {

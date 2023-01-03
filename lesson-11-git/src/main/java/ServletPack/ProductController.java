@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import domain.Product;
 import impl.ProductServiceImpl;
-import les05.Product;
 import service.ProductService;
 
 

@@ -20,7 +20,7 @@
 		<!-- Sidebar  -->
 		<nav id="sidebar">
 			<div class="sidebar-header">
-				<h3>Admin Sidebar</h3>
+				<a href="${pageContext.request.contextPath}/cabinet.jsp" class="h3">I-SHOP</a>
 			</div>
 
 			<ul class="list-unstyled components">
@@ -32,12 +32,12 @@
 						<li><a
 							href="${pageContext.request.contextPath}/createProduct.jsp">Create
 								product</a></li>
-						<li><a href="#">Edit product</a></li>
-						<li><a href="#">Remove product</a></li>
+						<li><a
+							href="${pageContext.request.contextPath}/allProducts.jsp">All
+								products</a></li>
+
 					</ul></li>
-				<li><a
-					href="${pageContext.request.contextPath}/allProducts.jsp">All
-						products</a></li>
+
 
 			</ul>
 
@@ -62,9 +62,15 @@
 						<i class="fas fa-align-justify"></i>
 					</button>
 
+
+
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="nav navbar-nav ml-auto">
-
+							<li class="nav-item">
+								<button class=" bucket">
+									<a href="${pageContext.request.contextPath}/bucket.jsp">Bucket</a>
+								</button>
+							</li>
 							<li class="nav-item">
 								<button class=" product-logout">LOGOUT</button>
 							</li>

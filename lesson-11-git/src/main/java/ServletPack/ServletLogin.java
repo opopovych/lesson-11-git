@@ -10,9 +10,9 @@ import javax.servlet.http.HttpSession;
 
 import com.google.gson.Gson;
 
+import domain.User;
 import dto.UserLogin;
 import impl.UserServiceImpl;
-import les05.User;
 import service.UserService;
 
 @WebServlet("/login")
@@ -41,6 +41,7 @@ public class ServletLogin extends HttpServlet {
 		if (user != null && user.getPassword().equals(password)) {
 			HttpSession session = request.getSession(true);
 			session.setAttribute("userId", user.getId());
+			session.setAttribute("role", user.getRole().toString());
 			UserLogin userLogin = new UserLogin();
 			userLogin.destinationUrl = "cabinet.jsp";
 			userLogin.userEmail = user.getEmail();

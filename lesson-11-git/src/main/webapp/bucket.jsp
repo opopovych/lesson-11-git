@@ -13,7 +13,7 @@
 	integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="css/cabinet.css">
-
+<link rel="stylesheet" href="css/bucket.css">
 <body>
 <body id="body-pd">
 	<div class="wrapper">
@@ -62,9 +62,11 @@
 						<i class="fas fa-align-justify"></i>
 					</button>
 
+
+
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="nav navbar-nav ml-auto">
-<li class="nav-item">
+							<li class="nav-item">
 								<button class=" bucket">
 									<a href="${pageContext.request.contextPath}/bucket.jsp">Bucket</a>
 								</button>
@@ -76,11 +78,15 @@
 					</div>
 				</div>
 			</nav>
-			<div class="container-fluid">
-				
-					<div id="productCards" class="row text-center"></div>
-				
-			</div>
+<div class="container-fluid">
+		<input type="text" id="myInput" onkeyup="myFunction()"
+			placeholder="Search for names.." title="Type in a name">
+
+		<table id="myTable">
+		</table>
+
+
+	</div>
 
 		</div>
 	</div>
@@ -110,5 +116,6 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
 		integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
 		crossorigin="anonymous"></script>
+		<script src="js/bucket.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
 import dao.UserDao;
 import dao.impl.BucketDaoImpl;
 import dao.impl.UserDaoImpl;
-import les05.User;
+import domain.User;
 import service.UserService;
 
 public class UserServiceImpl implements UserService {

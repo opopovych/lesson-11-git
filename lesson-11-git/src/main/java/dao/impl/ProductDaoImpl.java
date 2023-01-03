@@ -11,7 +11,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import dao.ProductDao;
-import les05.Product;
+import domain.Product;
 import utils.ConnectionUtil;
 
 public class ProductDaoImpl implements ProductDao {

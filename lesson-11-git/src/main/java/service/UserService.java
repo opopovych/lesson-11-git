@@ -1,6 +1,6 @@
 package service;
 
-import les05.User;
+import domain.User;
 import shared.AbstractCRUD;
 import shared.ReadByEmail;
 

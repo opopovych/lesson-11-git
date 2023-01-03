@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 
 import dao.BucketDao;
 import dao.impl.BucketDaoImpl;
-import les05.Bucket;
+import domain.Bucket;
 import service.BucketService;
 
 public class BucketServiceImpl implements BucketService {

@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import domain.UserRole;
+import domain.User;
 import impl.UserServiceImpl;
-import les05.Role;
-import les05.User;
 import service.UserService;
 
 //@WebServlet("/login")
@@ -36,7 +36,7 @@ public class ServletRegister extends HttpServlet {
 		//} else {
 			// userService.saveUser(new User(firstName, lastName, email, password));
 			if (!email.isEmpty() && !firstName.isEmpty() && !lastName.isEmpty() && !password.isEmpty()) {
-				userService.create(new User(email, firstName, lastName, Role.USER.toString(), password));
+				userService.create(new User(email, firstName, lastName, UserRole.USER.toString(), password));
 			}
 			response.setContentType("text/plain");
 			response.setCharacterEncoding("UTF-8");

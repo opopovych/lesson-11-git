@@ -12,7 +12,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import dao.BucketDao;
-import les05.Bucket;
+import domain.Bucket;
 import utils.ConnectionUtil;
 
 public class BucketDaoImpl implements BucketDao {

@@ -1,4 +1,4 @@
-package les05;
+package domain;
 
 import java.util.Objects;
 

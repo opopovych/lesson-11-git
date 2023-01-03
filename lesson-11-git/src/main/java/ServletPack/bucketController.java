@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import domain.Bucket;
 import impl.BucketServiceImpl;
-import les05.Bucket;
 import service.BucketService;
 
 /**
@@ -35,6 +35,14 @@ private	BucketService bucketService = BucketServiceImpl.getBucketService();
 		Bucket bucket = new Bucket(userId, Integer.parseInt(productId), new Date());
 		bucketService.create(bucket);
 		
+		
+		response.setContentType("text");
+		response.setCharacterEncoding("UTF-8");
+		response.getWriter().write("Success");
+	}
+	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String bucketId = request.getParameter("bucketId");
+		bucketService.delete(Integer.parseInt(bucketId));
 		
 		response.setContentType("text");
 		response.setCharacterEncoding("UTF-8");
