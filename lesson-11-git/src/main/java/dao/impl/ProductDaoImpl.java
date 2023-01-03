@@ -15,11 +15,11 @@ import les05.Product;
 import utils.ConnectionUtil;
 
 public class ProductDaoImpl implements ProductDao {
-	private static String READ_ALL = "select * from product";
-	private static String CREATE = "insert into product(name,description,price) values(?,?,?)";
-	private static String READ_BY_ID = "select * from product where id = ?";
-	private static String UPDATE_BY_ID = "update product set name = ?,description = ?,price = ? where id = ?";
-	private static String DELETE_BY_ID = "delete from product where id = ?";
+	private static String READ_ALL = "select * from products";
+	private static String CREATE = "insert into products(name,description,price) values(?,?,?)";
+	private static String READ_BY_ID = "select * from products where id = ?";
+	private static String UPDATE_BY_ID = "update products set name = ?,description = ?,price = ? where id = ?";
+	private static String DELETE_BY_ID = "delete from products where id = ?";
 
 	private static Logger LOGGER = Logger.getLogger(ProductDaoImpl.class);
 
